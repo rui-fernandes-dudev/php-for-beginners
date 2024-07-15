@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Conditionals and Booleans</title>
+        <title>Arrays</title>
         <style>
             body{
                 display: grid;
@@ -14,20 +14,20 @@
         </style>
     </head>
     <body>
+        <h1>Recommended Books</h1>
+
         <?php
-            $name = "Dark Matter";
-            $read = true;
-
-            if ($read) {
-                $message = "You have read $name";
-            } else {
-                $message = "You have not read $name";
-            }
-
+            $books = [
+                "Do Androids Dream of Electric Sheep",
+                "The Langoliers",
+                "Hail Mary"
+            ];
         ?>
 
-        <h1>
-            <?= $message ?>
-        </h1>
+        <ul>
+            <?php foreach ($books as $book) : ?>
+                <li><?= $book ?></li>
+            <?php endforeach; ?>
+        </ul>
     </body>
 </html>
